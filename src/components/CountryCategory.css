@@ -1,0 +1,48 @@
+.grid2{
+  margin: 75px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.grid-item2 {
+  background-color: white;
+  font-style:normal;
+  font-weight: bold;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  border-style: dashed;
+  border-color:black;
+  margin:35px;
+  height: 157px;
+  border-width:20px;
+  border-radius:5px;
+}
+
+h2{
+  background-color: black;
+  color: white;
+  text-align: center;
+  height:100px;
+  font-size: 75px;
+  margin:30px auto;
+  width:80%;
+  height:100px;
+  border-width:20px;
+  border-radius:5px;
+}
+
+.buttonn-container{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.buttonn{
+  height: 80px;
+  width: 500px;
+  text-align: center;
+  font-size:x-large;
+  font-weight:bolder;
+}

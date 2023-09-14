@@ -1,0 +1,23 @@
+.grid{
+  margin: 75px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  }
+  
+  .grid-item {
+  background-color: white;
+  font-style:normal;
+  font-weight: bold;
+  padding: 20px;
+  font-size: 45px;
+  font-style:oblique;
+  text-align: center;
+  border-style:dashed;
+  border-color: black;
+  margin:50px;
+  height: 200px;
+  border-width:20px;
+  border-radius:5px;
+  }
+  
