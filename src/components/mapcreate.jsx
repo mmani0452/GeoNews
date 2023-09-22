@@ -1,4 +1,4 @@
-import React, { useState, useContext, useRef, useEffect } from 'react';
+import React, {useContext, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "leaflet/dist/leaflet.css"
 import "./mapcreate.css"
@@ -11,11 +11,9 @@ import { AppContext } from './AppContext';
 export const GlobeMap = () => {
       const minZoom = 2;
       const maxZoom = 6;
-      const [allData, setAllData] = useState({});
       const navigate = useNavigate();
       const {HighlightedCountry} = useContext(AppContext);
       const geoJsonLayers = useRef([]);
-      
       const onEachCountry = (country, layer) => {
         geoJsonLayers.current.push(layer);
         console.log(HighlightedCountry);

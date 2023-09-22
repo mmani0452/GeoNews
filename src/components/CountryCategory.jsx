@@ -10,7 +10,6 @@ import he from 'he';
 export const CountryCategory = () => {
     const {countryName, category} = useParams();
     const [table,settable] = useState([]);
-    const [error, setError] = useState(null);
     const [translatedTable, setTranslatedTable] = useState([]);
     const [isTranslated, setIsTranslated] = useState(false);
 
@@ -113,14 +112,10 @@ export const CountryCategory = () => {
         })
         .catch((error) => {
             console.log(error);
-            setError('Failed to load articles.');
     })
     }
-    ,[countryName,category]);
+    ,[countryName,category,twoLetterCode]);
 
-    const handleclick = () => {
-
-    }
 
     
   return (
@@ -134,7 +129,7 @@ export const CountryCategory = () => {
       </div>
         <div className = 'grid2'>
         {(isTranslated ? translatedTable : table).map((item, index) => (
-          <a href={item.url} target='_blank' key={index}>
+          <a href={item.url} target='_blank' rel="noopener noreferrer" key={index}>
             <div className='grid-item2'>
               <div className='title'>
                 {isTranslated ? item.translatedTitle : item.title}
